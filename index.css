@@ -1,0 +1,33 @@
+body{
+	height: 100%;
+	background-color: #46a5f8;
+}
+
+#time{
+	margin: 100px 100px 0px 100px;
+	height: 200px;
+	border: 2px dashed black;
+	border-radius: 25px;
+}
+
+#text{
+	font:40px recursive;
+	text-align: center;
+	padding-top: 30px;
+}
+
+#main{
+	margin:30px 100px 90px 100px;
+	display: flex;
+	justify-content: space-between;
+	padding:60px;
+}
+
+.time{
+	height:60px;
+	width: 200px;
+	border-radius: 25px;
+	font:20px josefin sans;
+	border:none;
+	background-color: #F89946;
+}
