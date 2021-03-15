@@ -16,6 +16,24 @@ body{
 	padding-top: 30px;
 }
 
+#alarm-box{
+	border:2px dashed black;
+	margin:10px 100px 0px 100px;
+	height: 200px;
+	border-radius: 25px;
+	justify-content: space-between;
+	padding-right: 100px;
+	display: none;
+}
+
+.alarm{
+	margin:80px 0px 0px 100px;
+	height: 30px;
+	width: 150px;
+	padding-left: 50px;
+	border-radius: 10px;
+}
+
 #main{
 	margin:30px 100px 90px 100px;
 	display: flex;
