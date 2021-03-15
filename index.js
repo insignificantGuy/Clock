@@ -25,10 +25,17 @@ function showTime(){
 	else{
 		other="AM";
 	}
+	if(minutes>=0&&minutes<=9){
+		minutes="0"+minutes;
+	}
 	fulltime=hour+":"+minutes+":"+second+" "+other;
 	var x=document.getElementById("text");
 	x.innerHTML=fulltime;
 	return fulltime;
 }
 
-console.log(showTime());
+function alarm(){
+	var hour=document.getElementById("hour").value;
+	hour=
+	console.log(hour);
+}
