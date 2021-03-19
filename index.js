@@ -31,6 +31,10 @@ function showTime(){
 	if(minutes>=0&&minutes<=9){
 		minutes="0"+minutes;
 	}
+
+	if(second>=0&&second<=9){
+		second="0"+second;
+	}
 	fulltime=hour+":"+minutes+":"+second+" "+other;
 	var x=document.getElementById("text");
 	x.innerHTML=fulltime;
@@ -49,15 +53,17 @@ function alarm(){
 	if(day=="PM"){
 		prefHour+=12;
 	}
-	var actualTime=(prefHour-actualHour)*60*60+(prefMinutes-actualMinutes)*60+(60-actualSeconds);
+	var actualTime=(prefHour-actualHour)*60*60+(prefMinutes-actualMinutes)*60-actualSeconds;
 	var i=0;
-	console.log(actualTime);
-	while(i<actualTime){
+	setInterval(()=>{
 		if(i==actualTime){
 			PlaySound();
+			clearInterval(this);
 		}
-		setInterval(increment(i),1000);
-	}
+		else{
+			i++;
+		}
+	},1000);
 }
 
 function increment(i){
@@ -72,6 +78,6 @@ function PlaySound() {
 }
 
 function stop(){
-	var sound=document.getElementById("sound1");
-	sound.pause();
+	var sound = document.getElementById("sound1");
+  	sound.play();
 }
