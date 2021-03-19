@@ -54,7 +54,7 @@ function alarm(){
 		prefHour+=12;
 	}
 	var actualTime=(prefHour-actualHour)*60*60+(prefMinutes-actualMinutes)*60-actualSeconds;
-	var i=0;
+	var i=2;
 	setInterval(()=>{
 		if(i==actualTime){
 			PlaySound();
@@ -78,6 +78,5 @@ function PlaySound() {
 }
 
 function stop(){
-	var sound = document.getElementById("sound1");
-  	sound.play();
+	window.location.reload();
 }
