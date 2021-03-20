@@ -1,3 +1,4 @@
+// Toggle the Display of Alarm Box
 function set(){
 	var x= document.getElementById("alarm-box");
 	if(x.style.display==="none"){
@@ -8,8 +9,11 @@ function set(){
 	}
 }
 
+
+//Update Time on the Main Page
 setInterval(showTime,1000);
 
+//Function To show the Time on the page in 12 Hour Format
 function showTime(){
 	var date= new Date();
 	var hour= date.getHours();
@@ -41,6 +45,8 @@ function showTime(){
 	return fulltime;
 }
 
+
+// Main Function for the Alarm
 function alarm(){
 	set();
 	var d= new Date();
@@ -66,17 +72,14 @@ function alarm(){
 	},1000);
 }
 
-function increment(i){
-	showTime();
-	i++;
-}
-
-
+//Function To play Sound on the Page
 function PlaySound() {
   var sound = document.getElementById("sound1");
   sound.play();
 }
 
+
+//Function to Stop the Sound on the Page.
 function stop(){
 	window.location.reload();
 }
